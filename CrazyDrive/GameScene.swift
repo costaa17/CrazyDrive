@@ -9,37 +9,103 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var lastLocation:CGPoint = CGPointMake(0, 0)
+    var shape: Shape?
+    var intervalToNextHole = 0
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        //Setup background
+        let BGImage = imageManager.backgroundImage()
+        let BGTexture = SKTexture(image: BGImage)
+        let background = SKSpriteNode(texture: BGTexture)
+        background.xScale = 5
+        background.yScale = 5
+        background.zPosition = -1
+        background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        self.addChild(background)
+        
+        //Setup truck
+        let truckImage = imageManager.truckImage()
+        let truckTexture = SKTexture(image: truckImage)
+        let truck = SKSpriteNode(texture: truckTexture)
+        truck.xScale = 2
+        truck.yScale = 2
+        truck.position = CGPointMake(truck.size.width, truck.size.height + 150)
+        self.addChild(truck)
+        
+        //Setup gesture recognizer
+        self.view?.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(detectPan)))
+        
+        //Setup samples
+        let square = Shape(type: 1, shapeC: GROUND_COLOR)
+        square.position = CGPointMake(CGRectGetMaxX(self.frame) - 100, CGRectGetMaxY(self.frame) - 150)
+        self.addChild(square)
+        
+        let polygon = Shape(type: 2, shapeC: GROUND_COLOR)
+        polygon.position = CGPointMake(CGRectGetMaxX(self.frame) - 100, CGRectGetMaxY(self.frame) - 250)
+        self.addChild(polygon)
+        
+        let triangle = Shape(type: 3, shapeC: GROUND_COLOR)
+        triangle.position = CGPointMake(CGRectGetMaxX(self.frame) - 100, CGRectGetMaxY(self.frame) - 350)
+        self.addChild(triangle)
+        
+        let ditriangle = Shape(type: 4, shapeC: GROUND_COLOR)
+        ditriangle.position = CGPointMake(CGRectGetMaxX(self.frame) - 100, CGRectGetMaxY(self.frame) - 450)
+        self.addChild(ditriangle)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        if let location = touches.first?.locationInNode(self) {
+            let node = self.nodeAtPoint(location)
+            if let s = node as? Shape{
+                shape = s;
+            }
         }
     }
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        if intervalToNextHole == 0 {
+            let hole = Hole(type: randomShapeType())
+            hole.position = CGPointMake(CGRectGetMaxX(self.frame) + hole.size.width , 185)
+            self.addChild(hole)
+            hole.name = "hole"
+            intervalToNextHole = Int(randomInterval())
+            
+        }else {
+            intervalToNextHole = intervalToNextHole - 1
+        }
+        
+        self.enumerateChildNodesWithName("hole") {
+            node, stop in
+            if node.position.x < 0 {
+                node.removeFromParent()
+            }else {
+                node.position.x = node.position.x - SPEED
+            }
+        }
+    }
+    
+    func detectPan(recognizer:UIPanGestureRecognizer) {
+        let translation  = recognizer.translationInView(self.view!)
+        if shape != nil{
+            shape!.position = CGPointMake(shape!.position.x + translation.x, shape!.position.y - translation.y)
+        }
+    }
+    
+    func random (loweRange: UInt32, higherRange: UInt32) -> UInt32 {
+        let random = arc4random_uniform(higherRange - loweRange) + loweRange
+        return random
+    }
+    
+    func randomInterval() -> Int {
+        return Int(random(MIN_INTERVAL, higherRange: MAX_INTERVAL))
+    }
+    
+    func randomShapeType() -> Int {
+        return Int(random(1, higherRange: 4))
     }
 }
