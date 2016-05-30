@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		247A38301CFCF437003F4D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A382F1CFCF437003F4D28 /* AppDelegate.swift */; };
+		247A38321CFCF437003F4D28 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 247A38311CFCF437003F4D28 /* GameScene.sks */; };
+		247A38341CFCF437003F4D28 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A38331CFCF437003F4D28 /* GameScene.swift */; };
+		247A38361CFCF437003F4D28 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A38351CFCF437003F4D28 /* GameViewController.swift */; };
+		247A38391CFCF437003F4D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247A38371CFCF437003F4D28 /* Main.storyboard */; };
+		247A383B1CFCF437003F4D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247A383A1CFCF437003F4D28 /* Assets.xcassets */; };
+		247A383E1CFCF437003F4D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247A383C1CFCF437003F4D28 /* LaunchScreen.storyboard */; };
+		247A38491CFCF437003F4D28 /* CrazyDriveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A38481CFCF437003F4D28 /* CrazyDriveTests.swift */; };
+		247A38541CFCF437003F4D28 /* CrazyDriveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A38531CFCF437003F4D28 /* CrazyDriveUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		247A38451CFCF437003F4D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 247A38241CFCF437003F4D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 247A382B1CFCF437003F4D28;
+			remoteInfo = CrazyDrive;
+		};
+		247A38501CFCF437003F4D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 247A38241CFCF437003F4D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 247A382B1CFCF437003F4D28;
+			remoteInfo = CrazyDrive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		247A382C1CFCF437003F4D28 /* CrazyDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		247A382F1CFCF437003F4D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		247A38311CFCF437003F4D28 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		247A38331CFCF437003F4D28 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		247A38351CFCF437003F4D28 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		247A38381CFCF437003F4D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		247A383A1CFCF437003F4D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		247A383D1CFCF437003F4D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		247A383F1CFCF437003F4D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247A38441CFCF437003F4D28 /* CrazyDriveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyDriveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247A38481CFCF437003F4D28 /* CrazyDriveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyDriveTests.swift; sourceTree = "<group>"; };
+		247A384A1CFCF437003F4D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247A384F1CFCF437003F4D28 /* CrazyDriveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyDriveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247A38531CFCF437003F4D28 /* CrazyDriveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyDriveUITests.swift; sourceTree = "<group>"; };
+		247A38551CFCF437003F4D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		247A38291CFCF437003F4D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A38411CFCF437003F4D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A384C1CFCF437003F4D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		247A38231CFCF437003F4D28 = {
+			isa = PBXGroup;
+			children = (
+				247A382E1CFCF437003F4D28 /* CrazyDrive */,
+				247A38471CFCF437003F4D28 /* CrazyDriveTests */,
+				247A38521CFCF437003F4D28 /* CrazyDriveUITests */,
+				247A382D1CFCF437003F4D28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		247A382D1CFCF437003F4D28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				247A382C1CFCF437003F4D28 /* CrazyDrive.app */,
+				247A38441CFCF437003F4D28 /* CrazyDriveTests.xctest */,
+				247A384F1CFCF437003F4D28 /* CrazyDriveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247A382E1CFCF437003F4D28 /* CrazyDrive */ = {
+			isa = PBXGroup;
+			children = (
+				247A382F1CFCF437003F4D28 /* AppDelegate.swift */,
+				247A38311CFCF437003F4D28 /* GameScene.sks */,
+				247A38331CFCF437003F4D28 /* GameScene.swift */,
+				247A38351CFCF437003F4D28 /* GameViewController.swift */,
+				247A38371CFCF437003F4D28 /* Main.storyboard */,
+				247A383A1CFCF437003F4D28 /* Assets.xcassets */,
+				247A383C1CFCF437003F4D28 /* LaunchScreen.storyboard */,
+				247A383F1CFCF437003F4D28 /* Info.plist */,
+			);
+			path = CrazyDrive;
+			sourceTree = "<group>";
+		};
+		247A38471CFCF437003F4D28 /* CrazyDriveTests */ = {
+			isa = PBXGroup;
+			children = (
+				247A38481CFCF437003F4D28 /* CrazyDriveTests.swift */,
+				247A384A1CFCF437003F4D28 /* Info.plist */,
+			);
+			path = CrazyDriveTests;
+			sourceTree = "<group>";
+		};
+		247A38521CFCF437003F4D28 /* CrazyDriveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				247A38531CFCF437003F4D28 /* CrazyDriveUITests.swift */,
+				247A38551CFCF437003F4D28 /* Info.plist */,
+			);
+			path = CrazyDriveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		247A382B1CFCF437003F4D28 /* CrazyDrive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247A38581CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDrive" */;
+			buildPhases = (
+				247A38281CFCF437003F4D28 /* Sources */,
+				247A38291CFCF437003F4D28 /* Frameworks */,
+				247A382A1CFCF437003F4D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrazyDrive;
+			productName = CrazyDrive;
+			productReference = 247A382C1CFCF437003F4D28 /* CrazyDrive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		247A38431CFCF437003F4D28 /* CrazyDriveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247A385B1CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDriveTests" */;
+			buildPhases = (
+				247A38401CFCF437003F4D28 /* Sources */,
+				247A38411CFCF437003F4D28 /* Frameworks */,
+				247A38421CFCF437003F4D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247A38461CFCF437003F4D28 /* PBXTargetDependency */,
+			);
+			name = CrazyDriveTests;
+			productName = CrazyDriveTests;
+			productReference = 247A38441CFCF437003F4D28 /* CrazyDriveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		247A384E1CFCF437003F4D28 /* CrazyDriveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247A385E1CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDriveUITests" */;
+			buildPhases = (
+				247A384B1CFCF437003F4D28 /* Sources */,
+				247A384C1CFCF437003F4D28 /* Frameworks */,
+				247A384D1CFCF437003F4D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247A38511CFCF437003F4D28 /* PBXTargetDependency */,
+			);
+			name = CrazyDriveUITests;
+			productName = CrazyDriveUITests;
+			productReference = 247A384F1CFCF437003F4D28 /* CrazyDriveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		247A38241CFCF437003F4D28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ana Vitoria do Valle Costa";
+				TargetAttributes = {
+					247A382B1CFCF437003F4D28 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					247A38431CFCF437003F4D28 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 247A382B1CFCF437003F4D28;
+					};
+					247A384E1CFCF437003F4D28 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 247A382B1CFCF437003F4D28;
+					};
+				};
+			};
+			buildConfigurationList = 247A38271CFCF437003F4D28 /* Build configuration list for PBXProject "CrazyDrive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 247A38231CFCF437003F4D28;
+			productRefGroup = 247A382D1CFCF437003F4D28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				247A382B1CFCF437003F4D28 /* CrazyDrive */,
+				247A38431CFCF437003F4D28 /* CrazyDriveTests */,
+				247A384E1CFCF437003F4D28 /* CrazyDriveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		247A382A1CFCF437003F4D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247A38321CFCF437003F4D28 /* GameScene.sks in Resources */,
+				247A383E1CFCF437003F4D28 /* LaunchScreen.storyboard in Resources */,
+				247A383B1CFCF437003F4D28 /* Assets.xcassets in Resources */,
+				247A38391CFCF437003F4D28 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A38421CFCF437003F4D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A384D1CFCF437003F4D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		247A38281CFCF437003F4D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247A38341CFCF437003F4D28 /* GameScene.swift in Sources */,
+				247A38361CFCF437003F4D28 /* GameViewController.swift in Sources */,
+				247A38301CFCF437003F4D28 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A38401CFCF437003F4D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247A38491CFCF437003F4D28 /* CrazyDriveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247A384B1CFCF437003F4D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247A38541CFCF437003F4D28 /* CrazyDriveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		247A38461CFCF437003F4D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 247A382B1CFCF437003F4D28 /* CrazyDrive */;
+			targetProxy = 247A38451CFCF437003F4D28 /* PBXContainerItemProxy */;
+		};
+		247A38511CFCF437003F4D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 247A382B1CFCF437003F4D28 /* CrazyDrive */;
+			targetProxy = 247A38501CFCF437003F4D28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		247A38371CFCF437003F4D28 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				247A38381CFCF437003F4D28 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		247A383C1CFCF437003F4D28 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				247A383D1CFCF437003F4D28 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		247A38561CFCF437003F4D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		247A38571CFCF437003F4D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		247A38591CFCF437003F4D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrazyDrive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDrive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		247A385A1CFCF437003F4D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrazyDrive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDrive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		247A385C1CFCF437003F4D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = CrazyDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDriveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyDrive.app/CrazyDrive";
+			};
+			name = Debug;
+		};
+		247A385D1CFCF437003F4D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CrazyDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDriveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrazyDrive.app/CrazyDrive";
+			};
+			name = Release;
+		};
+		247A385F1CFCF437003F4D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = CrazyDriveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDriveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrazyDrive;
+			};
+			name = Debug;
+		};
+		247A38601CFCF437003F4D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CrazyDriveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toiavalle.CrazyDriveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrazyDrive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		247A38271CFCF437003F4D28 /* Build configuration list for PBXProject "CrazyDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247A38561CFCF437003F4D28 /* Debug */,
+				247A38571CFCF437003F4D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		247A38581CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247A38591CFCF437003F4D28 /* Debug */,
+				247A385A1CFCF437003F4D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		247A385B1CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDriveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247A385C1CFCF437003F4D28 /* Debug */,
+				247A385D1CFCF437003F4D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		247A385E1CFCF437003F4D28 /* Build configuration list for PBXNativeTarget "CrazyDriveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247A385F1CFCF437003F4D28 /* Debug */,
+				247A38601CFCF437003F4D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 247A38241CFCF437003F4D28 /* Project object */;
+}
