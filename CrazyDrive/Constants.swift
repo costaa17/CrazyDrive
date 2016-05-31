@@ -18,3 +18,4 @@ let TIRES_COLOR = UIColor.blackColor()
 let MIN_INTERVAL: UInt32 = 50
 let MAX_INTERVAL: UInt32 = 100
 let SPEED: CGFloat = 5
+let HELP_SYMBOL_COLOR = UIColor.whiteColor()

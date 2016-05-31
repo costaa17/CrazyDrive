@@ -12,6 +12,8 @@ class GameScene: SKScene {
     var lastLocation:CGPoint = CGPointMake(0, 0)
     var shape: Shape?
     var intervalToNextHole = 0
+    var gameStarted = false
+    var tutorialLabel = UILabel(frame: CGRectMake(0, 0, 400, 40))
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -54,20 +56,37 @@ class GameScene: SKScene {
         let ditriangle = Shape(type: 4, shapeC: GROUND_COLOR)
         ditriangle.position = CGPointMake(CGRectGetMaxX(self.frame) - 100, CGRectGetMaxY(self.frame) - 450)
         self.addChild(ditriangle)
+        
+        //Setup tutorial
+        tutorialLabel.textColor = UIColor.blackColor()
+        tutorialLabel.text = "Drag shapes to fill the holes in the ground and help the driver in his tip!" + "\n" + "Tap to start"
+        tutorialLabel.numberOfLines = 0
+        tutorialLabel.font = UIFont(name: "Chalkduster", size: 18 )
+        tutorialLabel.sizeToFit()
+        tutorialLabel.textAlignment = NSTextAlignment.Center
+        tutorialLabel.center.x = self.view!.center.x
+        tutorialLabel.center.y = self.view!.center.y - 100
+        self.view!.addSubview(tutorialLabel)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
+        if gameStarted{
         if let location = touches.first?.locationInNode(self) {
             let node = self.nodeAtPoint(location)
             if let s = node as? Shape{
                 shape = s;
             }
         }
+        }else{
+            tutorialLabel.removeFromSuperview()
+            gameStarted = true
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        if gameStarted{
         if intervalToNextHole == 0 {
             let hole = Hole(type: randomShapeType())
             hole.position = CGPointMake(CGRectGetMaxX(self.frame) + hole.size.width , 185)
@@ -86,6 +105,7 @@ class GameScene: SKScene {
             }else {
                 node.position.x = node.position.x - SPEED
             }
+        }
         }
     }
     
