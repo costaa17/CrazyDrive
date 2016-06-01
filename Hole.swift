@@ -10,6 +10,8 @@ import Foundation
 class Hole: Shape {
     init(type: Int) {
         super.init(type: type, shapeC: SKY_COLOR)
+        self.physicsBody?.categoryBitMask = HOLE_CATEGORY
+        self.physicsBody?.contactTestBitMask = TRUCK_CATEGORY 
     }
     
     required init?(coder aDecoder: NSCoder) {

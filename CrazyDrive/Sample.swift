@@ -10,6 +10,8 @@ import Foundation
 class Sample: Shape {
     init(type: Int) {
         super.init(type: type, shapeC: GROUND_COLOR)
+        self.physicsBody?.categoryBitMask = SAMPLES_CATEGORY
+        self.physicsBody?.contactTestBitMask = HOLE_CATEGORY
     }
     
     required init?(coder aDecoder: NSCoder) {

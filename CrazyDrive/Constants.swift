@@ -19,3 +19,9 @@ let MIN_INTERVAL: UInt32 = 50
 let MAX_INTERVAL: UInt32 = 100
 let SPEED: CGFloat = 5
 let HELP_SYMBOL_COLOR = UIColor.whiteColor()
+
+//physics categories
+let TRUCK_CATEGORY: UInt32 = 1
+let HOLE_CATEGORY: UInt32 = 2
+let SAMPLES_CATEGORY: UInt32 = 4
+

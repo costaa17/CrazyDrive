@@ -16,10 +16,10 @@ class Shape: SKSpriteNode {
       Type 3 = Triangle
       Type 4 = DiTriangle
     */
-   
+    var type: Int
     init(type: Int, shapeC: UIColor) {
         let image: UIImage?//do your setup here to make a UIImage
-        
+        self.type = type;
         switch type{
         case 1:
             image = imageManager.squareImage(shapeC) //do your setup here to make a UIImage
@@ -39,6 +39,11 @@ class Shape: SKSpriteNode {
         
         self.xScale = 3
         self.yScale = 3
+        
+        self.zPosition = 2
+        self.physicsBody = SKPhysicsBody(rectangleOfSize: self.frame.size)
+        self.physicsBody?.collisionBitMask = 0
+        
         
     }
     
