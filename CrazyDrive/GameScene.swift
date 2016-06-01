@@ -14,6 +14,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     var intervalToNextHole = 0
     var gameStarted = false
     var tutorialLabel = UILabel(frame: CGRectMake(0, 0, 400, 40))
+    var score = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -69,7 +70,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         tutorialLabel.textColor = UIColor.blackColor()
         tutorialLabel.text = "Drag shapes to fill the holes in the ground and help the driver in his tip!" + "\n" + "Tap to start"
         tutorialLabel.numberOfLines = 0
-        tutorialLabel.font = UIFont(name: "Chalkduster", size: 18 )
+        tutorialLabel.font = UIFont(name: FONT_NAME, size: FONT_SIZE_TUTORIAL )
         tutorialLabel.sizeToFit()
         tutorialLabel.textAlignment = NSTextAlignment.Center
         tutorialLabel.center.x = self.view!.center.x
@@ -80,18 +81,28 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.gravity = CGVectorMake(0, 0)
         
+        //Setup score label
+        let scoreNode = SKLabelNode(text: "Score: " + String(self.score))
+        scoreNode.fontName = FONT_NAME
+        scoreNode.fontSize = FONT_SIZE_SCORE
+        scoreNode.fontColor = UIColor.blackColor()
+        scoreNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        self.addChild(scoreNode)
+
+        
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
         let bodies = getOrderedBodies(contact)
         if bodies.firstBody.categoryBitMask == TRUCK_CATEGORY &&
             bodies.secondBody.categoryBitMask == HOLE_CATEGORY {
-            print("lose")
+            self.addChild(GameOverNode(score: self.score, frame: self.frame))
         }else{
             let shape1 = bodies.firstBody.node as! Shape
             let shape2 = bodies.secondBody.node as! Shape
             if(shape1.type == shape2.type){
-            bodies.firstBody.node?.removeFromParent()
+                bodies.firstBody.node?.removeFromParent()
+                self.score = self.score + 1
             }
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2404FE6D1CFE8C1B00475467 /* GameOverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404FE6C1CFE8C1B00475467 /* GameOverNode.swift */; };
 		242CB11F1CFCFB9500E2E207 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CB11E1CFCFB9500E2E207 /* Shape.swift */; };
 		242CB1211CFCFCC100E2E207 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CB1201CFCFCC100E2E207 /* Sample.swift */; };
 		242CB1231CFCFD2000E2E207 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CB1221CFCFD2000E2E207 /* Hole.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2404FE6C1CFE8C1B00475467 /* GameOverNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverNode.swift; sourceTree = "<group>"; };
 		242CB11E1CFCFB9500E2E207 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = ../Shape.swift; sourceTree = "<group>"; };
 		242CB1201CFCFCC100E2E207 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		242CB1221CFCFD2000E2E207 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hole.swift; path = ../Hole.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				242CB11E1CFCFB9500E2E207 /* Shape.swift */,
 				242CB1201CFCFCC100E2E207 /* Sample.swift */,
 				242CB1221CFCFD2000E2E207 /* Hole.swift */,
+				2404FE6C1CFE8C1B00475467 /* GameOverNode.swift */,
 			);
 			path = CrazyDrive;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				247A38341CFCF437003F4D28 /* GameScene.swift in Sources */,
 				242CB11F1CFCFB9500E2E207 /* Shape.swift in Sources */,
+				2404FE6D1CFE8C1B00475467 /* GameOverNode.swift in Sources */,
 				247A38641CFCF4A6003F4D28 /* imageManager.swift in Sources */,
 				247A38361CFCF437003F4D28 /* GameViewController.swift in Sources */,
 				247A38301CFCF437003F4D28 /* AppDelegate.swift in Sources */,
